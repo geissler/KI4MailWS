@@ -1,0 +1,3 @@
+gunicorn
+html2text
+spyne
