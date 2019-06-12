@@ -1,3 +1,6 @@
+"""
+Simple "installation" script copying the files into the required folders
+"""
 import os
 import shutil
 

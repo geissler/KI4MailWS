@@ -23,11 +23,18 @@ class WSDLService(ServiceBase):
         @param eml the to be classified encoded as base64 string
         @return the target e-mail
         """
-        subject, body = WSDLService.extract_eml(eml)
+        success, subject, body = WSDLService.extract_eml(eml)
+
+        if not success:
+            return WSDLService.ai_module.error_target()
+
         attachments = []
 
         if WSDLService.extract_attachment:
-            attachments = WSDLService.extract_attachments(eml)
+            success, attachments = WSDLService.extract_attachments(eml)
+
+            if not success:
+                return WSDLService.ai_module.error_target()
 
         if WSDLService.do_pre_processing:
             subject, body, attachments = WSDLService.ai_module.preprocess(subject, body, attachments)
@@ -44,19 +51,24 @@ class WSDLService(ServiceBase):
 
     @staticmethod
     def extract_eml(eml):
-        dec = base64.b64decode(eml)
-        msg = BytesParser(policy=policy.default).parsebytes(dec)
+        try:
+            dec = base64.b64decode(eml)
+            msg = BytesParser(policy=policy.default).parsebytes(dec)
 
-        subject = msg.get("Subject").replace("\n", " ")
-        text = msg.get_body(preferencelist=("html", "plain")).get_content()
-        text = html2text(text)
-        text = text.replace("\n", " ")
+            subject = msg.get("Subject").replace("\n", " ")
+            text = msg.get_body(preferencelist=("html", "plain")).get_content()
+            text = html2text(text)
+            text = text.replace("\n", " ")
 
-        return subject, text
+            return True, subject, text
+        # Todo: Define correct error to catch
+        except:
+            return False, "", ""
 
     @staticmethod
     def extract_attachments(eml):
-        return False
+        # Todo: Implement attachment extraction
+        return False, []
 
 
     @staticmethod

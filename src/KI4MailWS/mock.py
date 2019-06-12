@@ -6,4 +6,19 @@ class MockAI:
 
     @staticmethod
     def classify(subject, body, attachments):
+        """
+        Classify the given email and return the correct target for this email
+        :param subject:
+        :param body: string
+        :param attachments: list of dictionaries--
+        :return: target email
+        """
         return "Please implement classify method"
+
+    @staticmethod
+    def error_target():
+        """
+        Return the default email in case an error occurs
+        :return: default email
+        """
+        return "error-target-mail"
