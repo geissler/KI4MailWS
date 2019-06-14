@@ -55,6 +55,9 @@ class WSDLService(ServiceBase):
             dec = base64.b64decode(eml)
             msg = BytesParser(policy=policy.default).parsebytes(dec)
 
+            if "Subject" not in msg:
+                return False, "", ""
+
             subject = msg.get("Subject").replace("\n", " ")
             text = msg.get_body(preferencelist=("html", "plain")).get_content()
             text = html2text(text)
