@@ -1,0 +1,207 @@
+Received: from klnsv483.biz3x.dsroot.de ([10.4.12.41])
+          by klnsv224
+          with ESMTP id 2019061817545657-196478 ;
+          Tue, 18 Jun 2019 17:54:56 +0200 
+Received: from klnsv483 (localhost [127.0.0.1])
+		 by klnsv483.biz3x.dsroot.de (Postfix) with ESMTP id 83AC6100B82
+		 for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 17:54:56 +0200 (CEST)
+Received: from klnsv396.idg.de (unknown [10.4.37.24])
+		 by klnsv483.biz3x.dsroot.de (Postfix) with ESMTPS id 52E34100873
+		 for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 17:54:56 +0200 (CEST)
+Received-SPF: None (mail1.gothaer.de: no sender authenticity
+  information available from domain of
+  postmaster@mail-yw1-f48.google.com) identity=helo;
+  client-ip=209.85.161.48; receiver=mail1.gothaer.de;
+  envelope-from="benjamin.geissler@gmail.com";
+  x-sender="postmaster@mail-yw1-f48.google.com";
+  x-conformance=spf_only
+Authentication-Results: mail1.gothaer.de; spf=Pass smtp.mailfrom=benjamin.geissler@gmail.com; spf=None smtp.helo=postmaster@mail-yw1-f48.google.com; dkim=pass (signature verified) header.i=@gmail.com
+IronPort-SDR: AOlSrJUhFp7dv11/Xc3N9tp/cjk7/4vqzVOdQWlREzazfbhNHOTUHgkAKzGKUNRQHxl2j/B4XK
+ kjMTAXuRoGAJF1i0E/tVqKGFMdvpt/75E=
+IronPort-PHdr: =?us-ascii?q?9a23=3AxIRRghPAvI3b4KBRf0Ml6mtUPXoX/o7sNwtQ0K?=
+ =?us-ascii?q?IMzox0Ivj/rarrMEGX3/hxlliBBdydt6sezbKO+P67ESxYuNDd6SlEKMQNHz?=
+ =?us-ascii?q?Y+yuwu1zQ6B8CEDUCpZNXLVAcdWPp4aVl+4nugOlJUEsutL3fbo3m18CJAUk?=
+ =?us-ascii?q?6nbVk9Kev6AJPdgNqq3O6u5ZLTfx9IhD2gar9uMRm6twrcutQIjYd4Nqo91h?=
+ =?us-ascii?q?TFr3pGdu9LwW9kOU+fkwzz68ut4ZJv6Thct+4k+8VdTaj0YqM0QKBCAj87KW?=
+ =?us-ascii?q?41/srrtRfCTQuL+HQRV3gdnwRLDQbY8hz0R4/9vSTmuOVz3imaJtD2QqsvWT?=
+ =?us-ascii?q?u+9adrSQTnhzkBOjUk7WzYkM1wjKZcoBK8uxxyxpPfbY+JOPZieK7WYNUXTn?=
+ =?us-ascii?q?dDUMlMTSxMGoyzb4UNAOQBM+hWrJTzqUUSohalHwagGPnixyVUinPq36A31f?=
+ =?us-ascii?q?kqHwHc3AwnGtIDqGnZo8vzNKcQS++1yajIzTPbYP1Xxzj96YjPchQ/rvGWQL?=
+ =?us-ascii?q?l9dtHexlcpFwPHlFqQrI3lPzWP2uQCrWeb7vFgVfmri2E5sQF8uTevxsI2hY?=
+ =?us-ascii?q?nIgoIZ0EzL9SJ8wIssI9CzVUB1YdmhEJRKtiGaMZN7QswlQ2F0uCY10KMJuY?=
+ =?us-ascii?q?ShcCcX1psqwQPUZf+fc4WQ/B7vSOKcLS17iX9lYr6zmhe//VW6xuDzVcS51k?=
+ =?us-ascii?q?tBoDBfndnWrH8N0gTe6siZRft5+UeswTOP2BrS6uFAOEw1laTaJ4M4zr4+mZ?=
+ =?us-ascii?q?cesl7PHiDxmEXxg6+Wclsr9vK05OTgZ7Xqvp6cN4lqhQHiKqkihNCzDOAiPg?=
+ =?us-ascii?q?UNX2WX4/mw2bz+8UHjT7hHjeU6kqzDv5DbIcQbqLS5AwhQ0os78BmwETGm0N?=
+ =?us-ascii?q?YCknkCLVJFfgiLj4f3NFHPO/D4FvO/jEq2kDpwyPDGO6fuApTJLnTZjLjher?=
+ =?us-ascii?q?N951ZGyAUv1dBf+45UCrYZLf3oREDxst7YAQU8Mwy1xeboENp92Z0fWWKUGa?=
+ =?us-ascii?q?+ZNL3dsUWT6+IgJOmMeI8VtyzjJPg//fLhkGE2yhchevyj0J0VYXW5GMNpLk?=
+ =?us-ascii?q?SCen7hmP8OFnsKtwckCuDn23OYVjsGTXu0Xas55zcMJ4+nuoPOXMj5irGH3i?=
+ =?us-ascii?q?6+H5sQaW1HEUuIHG3AeICNWvNKYyWXdJwy2gcYXKSsHtdynSqlsxX3nuI+c7?=
+ =?us-ascii?q?j42Qw98L/93dxo7vHSkhdsqWEmEZHEgCmEGntvlyYTRzZsgf4s6Uco0FqH2L?=
+ =?us-ascii?q?h1j7tCGNha9/5FAWJYfdaUh6QyQ5j+Dw3Ed9aNDl2hR4buGmRrFotvmodUPh?=
+ =?us-ascii?q?UYeZ3qxliLl2LiA+oQlrmGQYI56Lnd2H6jPctzxmzL0qIslAsnRI5VOHWil+?=
+ =?us-ascii?q?tj8FrdHYnMwUmQi6v4cKkHxyfC+SKCwTiVoUtaXQVsA7nCDhV9LgOe5Zyxrg?=
+ =?us-ascii?q?vIT+qEC7pgbVsewo2pL7FgOsKy1Xt4SM7KAfXGR0ztlUK3AiuUw76uMrHPan?=
+ =?us-ascii?q?0WiXa4agBM20hbtT7OP104GC65g27sCx5SLmLyOU7Sy+NAsC+QExYR4lyYdm?=
+ =?us-ascii?q?lh7LG5+jMQqM7EUc0p/Z4eqTUBrSlSTVqW3IvpIuaJ+g5DbbQ5A5t1qB8PnS?=
+ =?us-ascii?q?qR/y5EA4PwDZBIp1AZTDx1nVHO0DcnWqcZic1tjXk2y1VLAKmkin1gMGnJ54?=
+ =?us-ascii?q?rNHa+IdU3ppE7zUYz03F7R2ciw9aY1+voTzjer9EnhXgJquz1/lPYN7kel/o?=
+ =?us-ascii?q?3pNSUIW43Wdx0L5hsn94vbQwAC6tPWxHpsD5eZ6DD+0NsJIPE80ymtVfd2LK?=
+ =?us-ascii?q?6NBSSsFuIAOpj0eewTxT3LJlpMdKgavOZ8FPunXtmLwfWUJMNOoA+5jERFsN?=
+ =?us-ascii?q?56yBOBqy9FRr7B2bZY+9+x0SuOcRPflViCseeuobtAag4pIG+W2TfkK8lbaP?=
+ =?us-ascii?q?JRR4Zuay/ma4X/jp02z4Xgf3Vky2f9AAkpyMWWWiStP0X72wRSjxU3gkaCxi?=
+ =?us-ascii?q?ixiB14jhwigY2F3QD18+TDVQNWa257GjVFv2uzOISusoBAAlGVCmph3FPtrQ?=
+ =?us-ascii?q?6yj+BZmf5gejyACVcNfjLxKXllSLf1rLeZfspTvYshqj4ECr7uSE2GSrP7vx?=
+ =?us-ascii?q?oR2j/iGG0b/j0gajW2ocymwk5/gWOZdTB8q2bZcMxqgxvSt5THXfAE5jMdX2?=
+ =?us-ascii?q?FjjCXPQF21Pt2n59KRwp3OtOK3UmOnEJJecDLwyY6anCS+7GxuRxa4mqP7gc?=
+ =?us-ascii?q?XpRC491yKzzNx2TWPIoRL7N5HszLi/OPl7c1NAAVb9749rBdg7nNdgwp4X3n?=
+ =?us-ascii?q?cei9Oe+n9U2WvwMNAOwavldzJNXj8ExdfJ/RLokFNuNHOHxo/1Fz2dz8Jtas?=
+ =?us-ascii?q?P8YzY+1Sc07sQMA6CRteYWpyZ+r1umoA6UWsBTw2dBm8Mn82VSw+QAuQ50iC?=
+ =?us-ascii?q?qaHrAbEFMeMSG+3xiP6tm/qu1QagPNOfC62Ux8lNWgCveNrwBHQ3L0YL8tGC?=
+ =?us-ascii?q?Zx6oN0N1eE3HDo647iccXddppJ7kzSw0qG1rYMbs5h3vMR4EgvcXrwp3gk1/?=
+ =?us-ascii?q?I2gVR10Je2sZLGY2Rh8aSlAwJJYzj8Zscd4Dbo3u5Vmseb2ZzqH400QG1aGs?=
+ =?us-ascii?q?u1C6v2SXRO5aeCVU7GCjA3p3aFFKCKGAae7B4goHXTE5mmLTebKSp8r50qSR?=
+ =?us-ascii?q?+DKUhYmA1RUi89m8tzHA2sxsXkcUE/6T0Q/UX8pwFkxedhNh25WWDa7lTNCH?=
+ =?us-ascii?q?98WN2EIRxa4xsXrU3YN86X6+N1WS5V/4a6qAGXAmOebgVMS2oOXwbXYjKrdq?=
+ =?us-ascii?q?nr7t7G/e+CA+O4JPabeq2AnutYU+bbjYLqyIZt+CyAc9meJnQ3ReNuwVJNBD?=
+ =?us-ascii?q?oqfqaR0yVKUSEckDjBKtKWtAvpsDMitdixqbzqQF69vtbJUuoKd48zpFbuxv?=
+ =?us-ascii?q?3ff++I2HQndXACjchKnCGQjuBYhQ936WkmdiHxQ+pe83eVFuSI3PcQVUZTaj?=
+ =?us-ascii?q?svZpUWqfhgj08dYYiDzYmtnr9g0qxqUREcCRq4y5vvPYtTcwTffBvGHBrZa+?=
+ =?us-ascii?q?jAfGeWhZmxOeTlF/VRlLkG7kXg/2/ETAmzeGzEzWChVgjzY7gT12fCbUAY4M?=
+ =?us-ascii?q?flNU8zbAqrBNP+Nk/haI4x3WBwmOdkwCuNbDFUMCAgIRkU8PvNvWUB0685Qy?=
+ =?us-ascii?q?sYvzJkNbXWwX/HqbODe9BN670zRX0l8oASqGIzz78ftXsWfvF+lSrMo9IrmG?=
+ =?us-ascii?q?mIybDemBxgVhcG6jNChYbS+0plJaXQ+4MGVXuWtBQKpX6dDRgHvZNsF8Hvtq?=
+ =?us-ascii?q?ZMy9POiLOWSn8K8tTa+tEZDtTVL8TPOWQoMB7gEjrZRAUfSjvjOWbajk1b2P?=
+ =?us-ascii?q?ackx/d5oA9sYTpkYESR6VzUVU0ErYLFR0gEoBSZphwWTwgnPiQi8tJrXuyoR?=
+ =?us-ascii?q?/NRdlL65DKUvXBZJenYD2djLRCe14J2eaiddVVZtC9ghI7LAUqz8zQFkHdXM?=
+ =?us-ascii?q?5AuHhkZw4w+QNC92R+R2ApnU7oOWbPqDceE+C5mhkuh05we+MooX3m7lE1L1?=
+ =?us-ascii?q?/Lom0/nUgqgtHomxiedTfwKOG7WoQcWE+W/wAhd4j2RQp4d1j4hUt/KDLNXK?=
+ =?us-ascii?q?5clZNlfGFvzR7D4N5BRa4aQqpDbxsdg/qQYr97tDYU4jXizkhB6+zfDJJknw?=
+ =?us-ascii?q?Z/aoaimHVG3xM6PYwFYJfILa8M9WB+w6eHvyumzOc0mVZMKEME8WfUcykN6h?=
+ =?us-ascii?q?VRa+sWYhGw9+kp0jSs3jtOfG9WCqgvq/Nus1IiYqGOk3Km3LlEJUS8ceeYKv?=
+ =?us-ascii?q?HBtg=3D=3D?=
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A0H6DgB0CAldhjChVdFmHgEGBwaBZQK?=
+ =?us-ascii?q?BKAIBAQEBXisBQXUECyiEFoEdgl6EI4pagg+KSIgZhgKBPjwJAQEBAQEBAQE?=
+ =?us-ascii?q?BCB8QAQEChD4CglIbBwE8Ag0BAQIBAQEDAQECAQECAQEBAhABAQEICwsIKSM?=
+ =?us-ascii?q?MgjoiHE07AwEBAQEBAQEBASQBAQEBAQEBAQEBHwIZFCkBGgMDIx0BCBMeAww?=
+ =?us-ascii?q?GAwIEAQY3AgIiAREBBQEcGYMiAYFpAQMdD44wkA48iyCBFAUBF4J6BYQyChk?=
+ =?us-ascii?q?nDWE0gQYCBxKBIAMBAQEBAYtYghaEIz6CVoI7gj2CWASpYAcCghKTUxuNC4o?=
+ =?us-ascii?q?pljONag8hgV2BYzM9gQGCOwmCBhqDVjOKIkAwkDIBAQ?=
+X-IPAS-Result: =?us-ascii?q?A0H6DgB0CAldhjChVdFmHgEGBwaBZQKBKAIBAQEBXisBQ?=
+ =?us-ascii?q?XUECyiEFoEdgl6EI4pagg+KSIgZhgKBPjwJAQEBAQEBAQEBCB8QAQEChD4Cg?=
+ =?us-ascii?q?lIbBwE8Ag0BAQIBAQEDAQECAQECAQEBAhABAQEICwsIKSMMgjoiHE07AwEBA?=
+ =?us-ascii?q?QEBAQEBASQBAQEBAQEBAQEBHwIZFCkBGgMDIx0BCBMeAwwGAwIEAQY3AgIiA?=
+ =?us-ascii?q?REBBQEcGYMiAYFpAQMdD44wkA48iyCBFAUBF4J6BYQyChknDWE0gQYCBxKBI?=
+ =?us-ascii?q?AMBAQEBAYtYghaEIz6CVoI7gj2CWASpYAcCghKTUxuNC4opljONag8hgV2BY?=
+ =?us-ascii?q?zM9gQGCOwmCBhqDVjOKIkAwkDIBAQ?=
+X-IronPort-AV: E=Sophos;i="5.63,389,1557180000"; 
+   d="scan'208,217";a="15123104"
+Received: from mail-yw1-f48.google.com ([209.85.161.48])
+  by mail1.gothaer.de with ESMTP/TLS/AES256-GCM-SHA384; 18 Jun 2019 17:54:54 +0200
+Received: by mail-yw1-f48.google.com with SMTP id t126so6931631ywf.3
+        for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 08:54:54 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=Bjf/787c+CmrB8w30FVdQAQIpLF4fMooUtmeJ6SMypc=;
+        b=nvapHdZoJTSXu2eVRbVp4C51ME5zqLhScdhEmEZ0rVRKDryzHntN9dCk1WATa5lJyy
+         JQUw8JXBIfoWPjJzHoJ88J1pm/Ibto7QAcT2FI/29RrUOz77Ls064RJJnggavNgiRzfC
+         p/G0UTQppKQGrbwOM3Tyk58RiIAWe8jyohVVE2gTcaHLrqqWeBHAteayC6mGrU829hQ6
+         CPiAJeq3WpMFTUwiHj86or9e4mQd8anH5PFAgHaNLKqgKkO1PSlgWSVmAxwhG/bf7KRh
+         seLcTWQ6o2GxbWKVW8qnnaj29HKRM7ka/IduEcGOriDSXhIIq99hX64OZT7qdrU826qU
+         jU2w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=Bjf/787c+CmrB8w30FVdQAQIpLF4fMooUtmeJ6SMypc=;
+        b=WVwqqsyEmBHvRR6DsNHC7NOZB1HAvSx81XYmI83G9yRa3a8BDvqq9T0a06VyqsxJTq
+         6xRUeDkxzwEojq/iXhKmYjhDh31JB4L08loPBDB4ISflDm7KkbqyDFEwm7zpSqnDGFzt
+         14Epwupj5NhFvXLa40jR50KpPuPSoSr7VXLGwUtS559QQ6kFuB6o/6KxIuSPZHIYW74/
+         vDTlFhm57q94x5kawEJX1lQKYR/4vv4ZHkV9JVeRc0IfJjxn9jGiGkjZDqfVHUkC5Rzj
+         NWNJM16fkTi5ZF9f7pSkLqXc2D7DELIQJEOTUdQ+/ZMbjNI4QU2f9vQTRkeQq1wDcAA6
+         JaqA==
+X-Gm-Message-State: APjAAAW5E0FsCzJSXu0lK8+ahjd6KR+faRJEVXmt8cFTKGS2KQe3wvOZ
+		 QeRmGk/9jGt9z2EImE0Tc+Qw/pzRSgcTpOr2LV0HYA==
+X-Google-Smtp-Source: APXvYqxpyIlqkxtmJPJ3Qep7M2ftjzq6hm9SmtGm9kJccrrXpkIrkD0diqLUJln+wXjFdQuJxRYs0MTbhoKsYTWJkvc=
+X-Received: by 2002:a81:3292:: with SMTP id y140mr53079676ywy.499.1560873293272;
+ Tue, 18 Jun 2019 08:54:53 -0700 (PDT)
+MIME-Version: 1.0
+References: <OF3E0C0469.6AE16FF1-ONC125841D.0056572F-C125841D.0057066B@gothaer.de>
+In-Reply-To: <OF3E0C0469.6AE16FF1-ONC125841D.0056572F-C125841D.0057066B@gothaer.de>
+From: =?UTF-8?Q?Benjamin_Gei=C3=9Fler?= <benjamin.geissler@gmail.com>
+Subject: Re: Daten
+To: benjamin_geissler@gothaer.de
+Message-ID: <CA+Oy8rHvCwBpH6gf-evsBv5sLeATpwiGGf3jWe-vt9JX0sAqNw@mail.gmail.com>
+Date: Tue, 18 Jun 2019 17:54:42 +0200
+X-MIMETrack: Itemize by SMTP Server on KLNW12/PARION-COM/DE at 18.06.2019 17:54:56,
+		 =?ISO-8859-1?Q?Serialize_by_NLNOTES=2EEXE_on_Benjamin_Gei=DFler=2FDM=2F?=
+ =?ISO-8859-1?Q?GOTHAER=2FDE=28Release_9=2E0=2E1FP8_SHF216|March_31=2C_?=
+ =?ISO-8859-1?Q?2017=29_at_18=2E06=2E2019_17=3A56=3A21?=,
+		 Serialize complete at 18.06.2019 17:56:22,
+		 =?ISO-8859-1?Q?Serialize_by_NLNOTES=2EEXE_on_Benjamin_Gei=DFler=2FDM=2F?=
+ =?ISO-8859-1?Q?GOTHAER=2FDE=28Release_9=2E0=2E1FP8_SHF216|March_31=2C_?=
+ =?ISO-8859-1?Q?2017=29_at_18=2E06=2E2019_17=3A56=3A22?=
+Content-Type: multipart/alternative; boundary="0000000000002f5b97058b9b22c4"
+
+--0000000000002f5b97058b9b22c4
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Antwort
+
+<benjamin_geissler@gothaer.de> schrieb am Di., 18. Juni 2019, 17:50:
+
+>
+>
+> _________________________________________________________________________=
+___________________________
+> Gesellschaft: Gothaer Finanzholding AG
+> Sitz: Arnoldiplatz 1, 50969 K=C3=B6ln (Hausanschrift)
+> Aufsichtsrat: Prof. Dr. Werner G=C3=B6rg (Vorsitzender)
+> Vorstand: Dr. Karsten Eichmann (Vorsitzender und Arbeitsdirektor), Oliver
+> Br=C3=BC=C3=9F, Dr. Mathias B=C3=BChring-Uhle, Harald Ingo Epple, Michael=
+ Kurtenbach, Dr.
+> Christopher Lohmann, Oliver Schoeller
+> Rechtsform: Aktiengesellschaft
+> Registergericht: Amtsgericht K=C3=B6ln, HRB 62211
+> USt-IdNr. DE193330903
+> Noch eine wichtige Information f=C3=BCr Sie: Damit wir Ihr Anliegen bearb=
+eiten
+> k=C3=B6nnen, speichern und verarbeiten wir personenbezogene Daten
+> (Stammdaten, Risikodaten, Schadendaten sowie weitere, vorgangsrelevante
+> Daten), die wir von Ihnen oder einem am Vorgang Beteiligten erhalten.
+> Ausf=C3=BChrliche Informationen zum Datenschutz finden Sie unter
+> www.gothaer.de/datenschutz.
+>
+>
+
+--0000000000002f5b97058b9b22c4
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<div dir=3D"auto">Antwort</div><br><div class=3D"gmail_quote"><div dir=3D"l=
+tr" class=3D"gmail_attr"> &lt;<a href=3D"mailto:benjamin_geissler@gothaer.d=
+e">benjamin_geissler@gothaer.de</a>&gt; schrieb am Di., 18. Juni 2019, 17:5=
+0:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;bo=
+rder-left:1px #ccc solid;padding-left:1ex">
+<br><font size=3D"2" face=3D"Arial">_______________________________________=
+_____________________________________________________________<br>Gesellscha=
+ft: Gothaer Finanzholding AG<br>Sitz: Arnoldiplatz 1, 50969 K=C3=B6ln (Haus=
+anschrift)<br>Aufsichtsrat: Prof. Dr. Werner G=C3=B6rg (Vorsitzender)<br>Vo=
+rstand: Dr. Karsten Eichmann (Vorsitzender und Arbeitsdirektor), Oliver Br=
+=C3=BC=C3=9F, Dr. Mathias B=C3=BChring-Uhle, Harald Ingo Epple, Michael Kur=
+tenbach, Dr. Christopher Lohmann, Oliver Schoeller<br>Rechtsform: Aktienges=
+ellschaft <br>Registergericht: Amtsgericht K=C3=B6ln, HRB 62211<br>USt-IdNr=
+. DE193330903<br>Noch eine wichtige Information f=C3=BCr Sie: Damit wir Ihr=
+ Anliegen bearbeiten k=C3=B6nnen, speichern und verarbeiten wir personenbez=
+ogene Daten <br>(Stammdaten, Risikodaten, Schadendaten sowie weitere, vorga=
+ngsrelevante Daten), die wir von Ihnen oder einem am Vorgang Beteiligten er=
+halten. <br>Ausf=C3=BChrliche Informationen zum Datenschutz finden Sie unte=
+r <a href=3D"http://www.gothaer.de/datenschutz" target=3D"_blank" rel=3D"no=
+referrer">www.gothaer.de/datenschutz</a>. </font>
+<br><font size=3D"2" face=3D"Arial"><br></font></blockquote></div>
+
+--0000000000002f5b97058b9b22c4--

@@ -1,0 +1,149 @@
+Received: from klnsv483.biz3x.dsroot.de ([10.4.12.41])
+          by klnsv224
+          with ESMTP id 2019061817360523-196081 ;
+          Tue, 18 Jun 2019 17:36:05 +0200 
+Received: from klnsv483 (localhost [127.0.0.1])
+		 by klnsv483.biz3x.dsroot.de (Postfix) with ESMTP id 31878100AA8
+		 for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 17:36:05 +0200 (CEST)
+Received: from klnsv396.idg.de (unknown [10.4.37.24])
+		 by klnsv483.biz3x.dsroot.de (Postfix) with ESMTPS id 03B2F100156
+		 for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 17:36:05 +0200 (CEST)
+Received-SPF: None (mail1.gothaer.de: no sender authenticity
+  information available from domain of
+  postmaster@mail-yw1-f50.google.com) identity=helo;
+  client-ip=209.85.161.50; receiver=mail1.gothaer.de;
+  envelope-from="benjamin.geissler@gmail.com";
+  x-sender="postmaster@mail-yw1-f50.google.com";
+  x-conformance=spf_only
+Authentication-Results: mail1.gothaer.de; spf=Pass smtp.mailfrom=benjamin.geissler@gmail.com; spf=None smtp.helo=postmaster@mail-yw1-f50.google.com; dkim=pass (signature verified) header.i=@gmail.com
+IronPort-SDR: hj615rjHJWh0oWqtrwnh0/3tAafCG8slfna4dADnVwXGkVhT7QpXEYOF3E0j71yE96Ur5R4XVe
+ usVqhsCPPasarxoVSRzQGRa+DRGjj4VgU=
+IronPort-PHdr: =?us-ascii?q?9a23=3A993VABUWlDW/HeYlVBX/+SA9bUfV8LGtZVwlr6?=
+ =?us-ascii?q?E/grcLSJyIuqrYbBSFt8tkgFKBZ4jH8fUM07OQ7/m6HzRYqsvR+DBaKdoQDk?=
+ =?us-ascii?q?ZD0Z1X1yUbQ+e9QXXhK/DrayFoVO9jb3RCu0+BDE5OBczlbEfTqHDhpRQbGx?=
+ =?us-ascii?q?H4KBYnbr+tQt2agMu4zf299IPOaAtUmjW9falyLBKrpgnNq8Uam4RvJrsvxh?=
+ =?us-ascii?q?fTvndEZ+tayGNrKFmOmxrw+tq88IRs/ihNpv4t7dJMXbn/c68lUbFWETMqPn?=
+ =?us-ascii?q?wv6sb2rxfDVwyP5nUdUmUSjBVFBhXO4Q/5UJnsrCb0r/Jx1yaGM8L4S7A0Qi?=
+ =?us-ascii?q?mi4LxwSBD0kicHNiU2/3/Rh8dtka9UuhOhpxh4w47JfIGYMed1c63Bcd8GQ2?=
+ =?us-ascii?q?dKQ8BcXDFDDIyhdYsCF+UOM+ZWoYf+ulUAswexCBK2C+/z0DJFnGP60bE43u?=
+ =?us-ascii?q?knDArI3BYgH9ULsHnMsdj6KqESUeKvw6nNzDXDaetZ1zbj54jJchchpe+DXa?=
+ =?us-ascii?q?htesfW0kYgCQXFjleKpozgPjOV0P4Bs2eF4OphTuKvkGonpB9rojW0yccsj5?=
+ =?us-ascii?q?PGhoMRylze6Sp5x4M1KMS+RUVmYtCkCINduz+GO4ZyWM8vQGFltDwnxrAHpJ?=
+ =?us-ascii?q?K3ZigHxIghyhXCcfKIaZKI7QjmVOuJITd3mnZleLWniha360egy+n8WtC00V?=
+ =?us-ascii?q?dEsyZJi9fMu3AR2xDJ5ciHTfx9/kil2TmRzQzc9uZEIUUsmaraLZ4u3KIwm4?=
+ =?us-ascii?q?INvUjfGiL6gkb7ga+Mekk5++Wk9v7rb7X6qpOEMo97kAD+MqAgmsylBuQ4Nx?=
+ =?us-ascii?q?ADUHOF9uS61r3s50j5QLRMjvEsnanWrpHaJd8Apq69HQBVyJ0u6xm6Dzi80d?=
+ =?us-ascii?q?QYmWMLI05CeBKCl4TpIU3BIOjkDfejhFShiCxkyO7APr3jGJrNK3nDkLH5cr?=
+ =?us-ascii?q?Zy9UFcyREzzctb551KELEMO/3zWkjttNzYFBA2LRa0z/z6B9pjhcsiXjeFD6?=
+ =?us-ascii?q?mbOabTt2iH6+M0OO2Bfqcavyr9IvU/ofLj3lEjnlpIV6Sv35ISaXaPMflnlE?=
+ =?us-ascii?q?GUezK4iNoHE24Pvwx4Q+Hrk0aGXCR7aHO7XqZ67TY+XtH1RbzfT5yg1eTSlB?=
+ =?us-ascii?q?ywGYdbMzgfVwKgMlbNMqiaUvMRYT6TJck/yGZWS+34GMcogAu1vUrhy7M9c7?=
+ =?us-ascii?q?SHsiZNr5/n3ch466rJmBU75TF4XKH/mynFByk81isEEjAz1aF750d6zwTLyv?=
+ =?us-ascii?q?0i26UGTIQJuqAsME9yfdaUh6QyC4X3WwfMO8mEUk2nRdP0Dys2S4A9ysMDMU?=
+ =?us-ascii?q?NwAM6rgR2G3ib4GKIflbGAGM4o9fG5vTC5b441gz6O3ql0tmsHWOgMOUiKp6?=
+ =?us-ascii?q?0mzjaNBqKKsle2kIK2JKUTxiGOxlaf0UqU52hcViRxWvCWOBJXLgOe5Zyxrk?=
+ =?us-ascii?q?mXTuCLJaUtNwAekuCEMZVgeMPLgERKban9M/7dWUi0wUeUJUuUz73cTI77f0?=
+ =?us-ascii?q?NM1nnQIxgUt1kV1kiKLwxlIimFoH2GaV4mXRqnKwukuaEujlPnSE0/8QGDMl?=
+ =?us-ascii?q?VR9be64BUtlOOeFfI2wptHvAgvsRN1LHul4s6HWtCciTBmerVhZdES/Ghtij?=
+ =?us-ascii?q?vHthInfbDwA6Nfujt8O0w/9wumn10/NtpsusZ0nDAOkxBzIv6c+kldT2nbx5?=
+ =?us-ascii?q?TxJ5H5I0zA1z6BdKvI3lz+z9iEo5URtvQ3qhLgoyaHOEUH1H9m4t1Z3HrM/8?=
+ =?us-ascii?q?ivbkJaGdq5Gg5/vyFZ+YPdaBc55dv50FBgK7vs7WXM/skQAfM48jWSLulcEq?=
+ =?us-ascii?q?OlMVHYPdYHGe6FCMYynkeRbjYaDtJb8aofZsWPXdegxpfsWYQo1HruxSwPqM?=
+ =?us-ascii?q?hj0GmV1zFAeOD5j5YB5cPD2QXAaTSlvGy8m9HS3p1NeRdVFDCE9gy4VINhIa?=
+ =?us-ascii?q?srJ5xaJjaSHua33tBg3I/gBSIBxAaIIDZkkIfhMVLaJxS13hRy2hFC8jS33C?=
+ =?us-ascii?q?qiyDpslCs167CSxzHK37H6fQEcaTQRFkB/kVfhJ5S1hNkGXU+uKjIkjwah+V?=
+ =?us-ascii?q?2jmPUJoa1+KzCVTkBUfyH7NSduX/j4raKMNvZG84hgqiBLSKK5aFGeRKT6pk?=
+ =?us-ascii?q?4Q3iXhFm5fwnY0ejCxoZH0hTR1jWucKDB4q3+KMdpoy0L549rRDeVUwiJARC?=
+ =?us-ascii?q?R8jmzPAUOgOtCy4diOv5LKs+T7Rn34E5MOKW/kyoSPsCb97mpvUlWznPG2z8?=
+ =?us-ascii?q?XuChNykTT62N9jSTjSoV7ib5Pq2aW3PaMvfkRhCFLmrcsvMo57m4o0wpoX3C?=
+ =?us-ascii?q?FA1K+Y9ncGj2r/dO5j9/+uMCg1TCUQi57Q6QnhgQtsKW6Jzo/jEHmQkINtYN?=
+ =?us-ascii?q?yzY2Ve3SxYjYgCAqqS7rVBnC0zrVe5thnVbOJVkTIUyP9o43kfy+0EowsiyC?=
+ =?us-ascii?q?yBD6taRxEJe3yx0U3Wtpbj9O1efwPNOfCo2VB7nMy9Ab3KuQxaVHvjO98jES?=
+ =?us-ascii?q?J28sRjIQfJ2Xz35JvjfYqYZtYSuxuI1hbY2rINedRhy7xT23MhZDqu2B9tg/?=
+ =?us-ascii?q?Q2hhFvw5yg6Y2OKmE0uq2+Hh5ROyeza85An1OlxatYgMuS2JiiW5t7HTBeFp?=
+ =?us-ascii?q?HlS/ChFTMU8/vqNh2VFDAmgnieELvbWwSY7Q01yhCHW4DuLHyRKHQDmJ9oSR?=
+ =?us-ascii?q?+fLUlehkYbUTQhhZo0DCilwcXgdAFy4TVbtTua4lNcj+lvMRf4SGLWogylPy?=
+ =?us-ascii?q?wsRq+YKh5HvUlSol3YOsuE4qdvDjlVq9e/+ReVJDXRNGEqRSkZH1aJDFf5Mv?=
+ =?us-ascii?q?yy6MncpqKGU/GmIaKGYK3S+7cDEa7ZndT1jtQgp3HWao2OJiUwUaF9gBEYGy?=
+ =?us-ascii?q?knQ4KB3GxeLk5f3yPVM5zF+lHloncx9obnt66zEAP3udnRVf0IbYQpq0jw2e?=
+ =?us-ascii?q?DZb6aRnHordmwej89KnC6SjuBYhQ536WkmdiHxQ+tc83eXEeSI3PcQVkBTaj?=
+ =?us-ascii?q?svZpIQv+RlgVYLaYiDzYmsnr9g0qxsVAwDDA293JnvPYtTfQTffBvGHBrZbu?=
+ =?us-ascii?q?zXY22WhZitMeXkDuQPxORM60/q4GjdTh+lZ2XZ0WGuDkHnMPkQ3nvCYloE49?=
+ =?us-ascii?q?D7KUwrUS+6HbeEIlWtOdtzx2Rsk4c5jX7LK2MQdANEXRgU/++26iVVyrV6Em?=
+ =?us-ascii?q?1FtzxqKvWEkiuDqeXVeN4QtrNwDyJ4mvgS6Wkmy7ZT8CBPReBk/Uma5t9orV?=
+ =?us-ascii?q?a8l+CTyz1hGBNQozdPjYiPsA1sI6LcvpVHXH/F+loK4wDyQ1wSoMB5D9T0p6?=
+ =?us-ascii?q?1K4t3Glaa2OSgbttyJpY0TAM/bLM/BO30kcFLoFDPSEAoZXGurOGXY1Ck/2L?=
+ =?us-ascii?q?mZ8nyYqIR/q4C5wsJfDO8GEgVrT7VHUhctBtEJLZZpUylxlLeaiJdO6n2irB?=
+ =?us-ascii?q?DcXoNWs8OiNLraDPPxJTKelbQBaQEPxOayJ4kVNIT+2kokZVR7h5/OFlD4Ut?=
+ =?us-ascii?q?VEoyknZQgx6hYokjA2Xigo1kTpZxn4qmcUDuKxlwUqhxFWZO0s8HL9/A5yKA?=
+ =?us-ascii?q?eS4iQ3l0Y1lJPuhjXbI1uTZO+gGIpRDSTzrU04NJj2Fh1tYzq1m0h1bWqWd/?=
+ =?us-ascii?q?dql7JlMFtTpkrctJ9IQ6MOSKRFZFoB2qjSaahwl1tbrSqjyAlM4u6XUcIzxj?=
+ =?us-ascii?q?tvSoalqjd74ywmadc0IaLKI68Qlwpfg6uPummj0eVjmQI=3D?=
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A0H6AgC0AwldhzKhVdFmHQEBBQEHBQG?=
+ =?us-ascii?q?BZYIOgWIECyiEFoEdgl6OfYJWiQ10hGcHgyuHQCoSCQEBAQEBAQEBAQgFKgE?=
+ =?us-ascii?q?BAocSGwcBSwEBAgEBAQMBAQIBAQIBAQECEAEBAQgNCQgpIwyCOiIcTTswAQE?=
+ =?us-ascii?q?BAQEBAQEBAR8CLSkBOQodARseAxIIAQIFNwIkAREBBQEGg1GBagEDHZsVgx8?=
+ =?us-ascii?q?8iyCBFAUBF4J6BYQyChknDWE0gQYCBxKBIocHhFeCFoVvhAOCPYJYBKlgBwK?=
+ =?us-ascii?q?CEpNTG4IXAYpziimFep4jDyGDQDM9gQGCO4IPGoNWilVAMJAyAQE?=
+X-IPAS-Result: =?us-ascii?q?A0H6AgC0AwldhzKhVdFmHQEBBQEHBQGBZYIOgWIECyiEF?=
+ =?us-ascii?q?oEdgl6OfYJWiQ10hGcHgyuHQCoSCQEBAQEBAQEBAQgFKgEBAocSGwcBSwEBA?=
+ =?us-ascii?q?gEBAQMBAQIBAQIBAQECEAEBAQgNCQgpIwyCOiIcTTswAQEBAQEBAQEBAR8CL?=
+ =?us-ascii?q?SkBOQodARseAxIIAQIFNwIkAREBBQEGg1GBagEDHZsVgx88iyCBFAUBF4J6B?=
+ =?us-ascii?q?YQyChknDWE0gQYCBxKBIocHhFeCFoVvhAOCPYJYBKlgBwKCEpNTG4IXAYpzi?=
+ =?us-ascii?q?imFep4jDyGDQDM9gQGCO4IPGoNWilVAMJAyAQE?=
+X-IronPort-AV: E=Sophos;i="5.63,389,1557180000"; 
+   d="scan'208,217";a="15122693"
+Received: from mail-yw1-f50.google.com ([209.85.161.50])
+  by mail1.gothaer.de with ESMTP/TLS/AES256-GCM-SHA384; 18 Jun 2019 17:36:03 +0200
+Received: by mail-yw1-f50.google.com with SMTP id n21so6919078ywh.0
+        for <benjamin_geissler@gothaer.de>; Tue, 18 Jun 2019 08:36:03 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=QZIrK+dMDIk1QV6iD+IzGoLt9igrg+ZYttHr3AlnBic=;
+        b=i7MDybmc73FnsVBzvJeydA6vcBkRBm2HLH5taf8HlylN9b4eC8xL1nCVdrl3LfLkw0
+         8NH4njcVha5pXJegrcPywj6iMtA+lGfrNiXEpUt99btFRonxUljGtWB71viv2+D8DkUT
+         T7DCf6X+L7ric4lBrtP2+rliuDFaMZCFFwmvleHwfz1Zv6hgi/kwOFFgMObiYldgi8q5
+         QK6ZobVlj0EmEdrz072fMsQmpuPKZ9VkJhIM6BFsuvNCHBpmwPhLvZZamlC1nABDNvQ/
+         vjCqHsTZfY8hlNZ3of/Vk1XSuAyM/uatN/b2SWL48eX/n12r9G9TUChpmv3ye641X0CO
+         kqJg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=QZIrK+dMDIk1QV6iD+IzGoLt9igrg+ZYttHr3AlnBic=;
+        b=SUHy+ozx6X1beuJP+o0n4tgYuolBgfYlaMgvys/Wltfz+5aA7IesRFhVtkc2PosqGJ
+         CPJ6Nb0CV2BT+3jW782/0B8WkN5g9k1BDaVKZ3BbxA3PvbSroGXiZJ9yYfs1KkmDodSE
+         irdnI+6bgjHRj6gDvptr2Z/9g+1fBoibZaPX+y0U18ApfPS2EhVAeXdjduF+ywqy2alD
+         B9jYgEJJ828btyKMo9s2OI4GJpdZN+DqxTBeodwkPxvxYBaZMOGC5LiB6VEy5Vc6SVHH
+         ru0UmunaSopr1c11wLo+dvAaeyOEW7JUCa/nxNN6COGTsVfnmrybKxHYCXBVdlsDrcld
+         83fA==
+X-Gm-Message-State: APjAAAV9fNAjMTN3hx4SESSb6DEINGd1DIxYPaWGXBDEA4O+ZNLt5yCC
+		 UJdf8C9Dq0SDeeo3RxiQPOg4TXx3Ze2XLZavcpB8/g==
+X-Google-Smtp-Source: APXvYqyG521pUMzuePazycAJlNKRgawktHCF3jT7RW4UOUowtQYx1XyRlVVxfTymDRDwrqbrTvwWNVRizzSnB8Spu/0=
+X-Received: by 2002:a81:5517:: with SMTP id j23mr68842780ywb.164.1560872162210;
+ Tue, 18 Jun 2019 08:36:02 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Benjamin_Gei=C3=9Fler?= <benjamin.geissler@gmail.com>
+Subject: Test EML
+To: benjamin_geissler@gothaer.de
+Message-ID: <CA+Oy8rH2P+JfrfR7JZH24kD0GbNpU=zDvLUpZp-0LBm5buK_WA@mail.gmail.com>
+Date: Tue, 18 Jun 2019 17:35:51 +0200
+X-MIMETrack: Itemize by SMTP Server on KLNW12/PARION-COM/DE at 18.06.2019 17:36:05,
+		 =?ISO-8859-1?Q?Serialize_by_NLNOTES=2EEXE_on_Benjamin_Gei=DFler=2FDM=2F?=
+ =?ISO-8859-1?Q?GOTHAER=2FDE=28Release_9=2E0=2E1FP8_SHF216|March_31=2C_?=
+ =?ISO-8859-1?Q?2017=29_at_18=2E06=2E2019_17=3A38=3A00?=,
+		 Serialize complete at 18.06.2019 17:38:00
+Content-Type: multipart/alternative; boundary="000000000000c4c024058b9adead"
+
+--000000000000c4c024058b9adead
+Content-Type: text/plain; charset="UTF-8"
+
+Diese ist der Body
+
+--000000000000c4c024058b9adead
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">Diese ist der Body</div>
+
+--000000000000c4c024058b9adead--

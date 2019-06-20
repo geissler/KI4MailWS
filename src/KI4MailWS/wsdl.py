@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf8
 """
-Basic SOAP based web service offering the functionality of different ai modules
+Basic based web service offering the functionality of different ai modules via SOAP or JSON
 """
 
-from spyne import rpc, ServiceBase, Unicode
 import base64
+import logging
+import os
+from spyne import rpc, ServiceBase, Unicode, Iterable
 from email.parser import BytesParser
 from email import policy
 from html2text import html2text
@@ -13,53 +15,101 @@ from html2text import html2text
 
 class WSDLService(ServiceBase):
     ai_module = None
-    extract_attachment = False
-    do_pre_processing = False
+    extract_attachment = None
+    do_pre_processing = None
+    logger = None
+    log_path = None
 
     @rpc(Unicode, _returns=Unicode)
-    def classify(self, eml):
+    def classify(ctx, eml):
         """base64 encoded eml to be classified by ai module, which returns target mail address
 
         @param eml the to be classified encoded as base64 string
         @return the target e-mail
         """
-        success, subject, body = WSDLService.extract_eml(eml)
-
+        success, message = WSDLService.get_message(eml)
         if not success:
+            WSDLService.logger.error("Error while encoding *.eml")
+            WSDLService.logger.info(WSDLService.ai_module.error_target())
+            return WSDLService.ai_module.error_target()
+
+        success, subject, body = WSDLService.extract_eml(message)
+        if not success:
+            WSDLService.logger.error("Error while parsing *.eml")
+            WSDLService.logger.info(WSDLService.ai_module.error_target())
             return WSDLService.ai_module.error_target()
 
         attachments = []
+        if WSDLService.extract_attachment is True:
+            success, attachments = WSDLService.extract_attachments(message)
 
-        if WSDLService.extract_attachment:
-            success, attachments = WSDLService.extract_attachments(eml)
-
-            if not success:
+            if success is False:
+                WSDLService.logger.error("Error while extracting attachments")
+                WSDLService.logger.info(WSDLService.ai_module.error_target())
                 return WSDLService.ai_module.error_target()
 
-        if WSDLService.do_pre_processing:
+        if WSDLService.do_pre_processing is True:
             subject, body, attachments = WSDLService.ai_module.preprocess(subject, body, attachments)
 
-        return WSDLService.ai_module.classify(subject, body, attachments)
+        classification = WSDLService.ai_module.classify(subject, body, attachments)
+        logging.info(classification)
+        return classification
 
     @rpc(_returns=Unicode)
-    def status(self):
+    def status(ctx):
         """Simple health check doing nothing
 
         @return simple string
         """
         return "Service is up and running"
 
-    @staticmethod
-    def extract_eml(eml):
-        try:
-            dec = base64.b64decode(eml)
-            msg = BytesParser(policy=policy.default).parsebytes(dec)
+    @rpc(_returns=Iterable(Unicode))
+    def stats(ctx):
+        """
+        Return an overview of the classification results logged within the log files
+        @return dictionary with dates and counts of mail addresses returned for each day
+        :return:
+        """
+        if os.path.isdir(WSDLService.log_path) is False:
+            WSDLService.logger.error("Path to log files not set correctly! Given folder {} does not exist".format(WSDLService.log_path))
+            yield {}
 
-            if "Subject" not in msg:
+        result = {}
+        directory = os.fsencode(WSDLService.log_path)
+        for file in os.listdir(directory):
+            filename = os.fsdecode(file)
+            if filename.endswith(".log"):
+                file_content = open(os.path.join(WSDLService.log_path, filename), "r")
+                for row in file_content:
+                    if "INFO" in row and "@gothaer" in row:
+                        date = row[0:10]
+                        if date not in result:
+                            result[date] = {}
+
+                        mail = row.split(" - ")[2].replace("\n", "").replace("\r", "")
+                        if mail not in result[date]:
+                            result[date][mail] = 0
+
+                        result[date][mail] = result[date][mail] + 1
+
+        yield result
+
+    @staticmethod
+    def get_message(eml):
+        try:
+            return True, BytesParser(policy=policy.default).parsebytes(base64.b64decode(eml))
+        # Todo: Define correct error to catch
+        except:
+            return False, ""
+
+    @staticmethod
+    def extract_eml(message):
+        try:
+            if "Subject" not in message:
                 return False, "", ""
 
-            subject = msg.get("Subject").replace("\n", " ")
-            text = msg.get_body(preferencelist=("html", "plain")).get_content()
+            subject = message.get("Subject").replace("\n", " ")
+            text = message.get_body(preferencelist=("html", "plain")).get_content()
             text = html2text(text)
             text = text.replace("\n", " ")
 
@@ -69,12 +119,14 @@ class WSDLService(ServiceBase):
             return False, "", ""
 
     @staticmethod
-    def extract_attachments(eml):
+    def extract_attachments(message):
         # Todo: Implement attachment extraction
+        print(message.get_content_type())
+        print(message.get_filename())
         return False, []
 
 
     @staticmethod
-    def preprocessing(content):
-        # one pre processing for all ai modules?
-        return content
+    def preprocessing(subject, body, attachments):
+        # Todo: check if one pre processing for all ai modules is required?
+        return subject, body, attachments
