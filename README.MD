@@ -4,3 +4,5 @@ req-web.txt
 Install using 
 
 pip install -r req-web.txt -t web\
+
+JSON requires name of service to be given with a POST in body => {"stats":{}}
