@@ -8,9 +8,9 @@ class MockAI:
     def classify(subject, body, attachments):
         """
         Classify the given email and return the correct target for this email
-        :param subject:
+        :param subject: string
         :param body: string
-        :param attachments: list of dictionaries--
+        :param attachments: list of dictionaries with filename and optional content as keys
         :return: target email
         """
         return "Please implement classify method"

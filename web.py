@@ -6,6 +6,7 @@ from src.KI4MailWS.wsdl import WSDLService
 from spyne import Application
 from spyne.protocol.soap import Soap11
 from spyne.protocol.json import JsonDocument
+from spyne.protocol.http import HttpRpc
 from spyne.util.wsgi_wrapper import WsgiMounter
 
 # configure logger - if log level is set to INFO a classification statistic will be accessible
@@ -54,7 +55,7 @@ app_soap = Application([WSDLService], config['wsdl-config']['SoapName'],
 
 # prepare a JSON returning web service
 app_json = Application([WSDLService], config['wsdl-config']['SoapName'],
-                       in_protocol=JsonDocument(validator='soft'),
+                       in_protocol=HttpRpc(validator='soft'),
                        out_protocol=JsonDocument())
 
 # Prepare a SOAP and JSON returning web service to be started by a external wsgi implementation (gunicorn)

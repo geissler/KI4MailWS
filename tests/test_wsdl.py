@@ -49,7 +49,6 @@ def test_extract_eml(wsdl_mock):
 def test_error_while_extracting(wsdl_mock):
     file_object = open(test_dir + "/success_small_01.eml", "r")
     content = base64.b64encode(file_object.read().encode())
-    print(content)
     status, message = wsdl_mock.get_message(content[:-1])
     assert status is False
     assert message == ""
@@ -95,3 +94,27 @@ def test_no_stats(wsdl_mock):
         stats.update(key)
 
     assert len(stats) == 0
+
+
+def test_extract_pdf(wsdl_mock):
+    file_object = open(test_dir + "/attachment_pdfa.eml", "r")
+    content = base64.b64encode(file_object.read().encode())
+    status, message = wsdl_mock.get_message(content)
+    assert status is True
+    status, attachments = wsdl_mock.extract_attachments(message, True)
+    assert status is True
+    assert len(attachments) == 1
+    assert attachments[0]["filename"] == "example_065.pdf"
+
+
+def test_extract_multiple(wsdl_mock):
+    file_object = open(test_dir + "/multiple_attachments.eml", "r")
+    content = base64.b64encode(file_object.read().encode())
+    status, message = wsdl_mock.get_message(content)
+    assert status is True
+    status, attachments = wsdl_mock.extract_attachments(message, True)
+    assert status is True
+    assert len(attachments) == 3
+    assert attachments[0]["filename"] == "Mappe1.xlsx"
+    assert attachments[1]["filename"] == "Dokument2.docx"
+    assert attachments[2]["filename"] == "example_065.pdf"

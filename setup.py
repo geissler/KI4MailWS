@@ -9,10 +9,20 @@ copy_destinations = [{
     'target': '../conf/',
     'file': 'web.ini',
     'overwrite': False
+},{
+    'src': 'conf/log.ini',
+    'target': '../conf/',
+    'file': 'log.ini',
+    'overwrite': False
 }, {
     'src': 'src/KI4MailWS/wsdl.py',
     'target': '../src/KI4MailWS/',
     'file': 'wsdl.py',
+    'overwrite': True
+}, {
+    'src': 'src/KI4MailWS/handler.py',
+    'target': '../src/KI4MailWS/',
+    'file': 'handler.py',
     'overwrite': True
 }, {
     'src': 'web.py',

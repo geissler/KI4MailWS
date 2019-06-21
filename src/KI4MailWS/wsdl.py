@@ -119,11 +119,26 @@ class WSDLService(ServiceBase):
             return False, "", ""
 
     @staticmethod
-    def extract_attachments(message):
-        # Todo: Implement attachment extraction
-        print(message.get_content_type())
-        print(message.get_filename())
-        return False, []
+    def extract_attachments(message, filename_only=True):
+        attachments = []
+        supported_file_types = ["application/pdf"]
+
+        for i in range(len(message.get_payload())):
+            attachment = message.get_payload()[i]
+            if attachment.get_filename() is not None:
+                if attachment.get_content_type() not in supported_file_types or filename_only is True:
+                    attachments.append({
+                        "filename": attachment.get_filename(),
+                        "content": ""
+                    })
+                else:
+                    # Todo: parse attachment
+                    attachments.append({
+                        "filename": attachment.get_filename(),
+                        "content": attachment.get_payload(decode=True)
+                    })
+
+        return True, attachments
 
 
     @staticmethod

@@ -1,4 +1,5 @@
 gunicorn
 html2text
-spyne
+spyne>=2.13.9a0
 pytest
+Werkzeug
