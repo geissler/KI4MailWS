@@ -8,6 +8,7 @@ from src.KI4MailWS.mock import MockAI
 success_msg = "Please implement classify method"
 error_msg = "error-target-mail"
 test_dir = os.path.join(os.path.realpath(__file__).replace(os.path.basename(__file__), ''), "data")
+log_dir = os.path.join(os.path.realpath(__file__).replace(os.path.basename(__file__), ''), "log")
 success_files = "success_"
 
 
@@ -15,7 +16,7 @@ success_files = "success_"
 def wsdl_mock():
     WSDLService.ai_module = MockAI()
     WSDLService.logger = logging.getLogger()
-    WSDLService.log_path = "log/"
+    WSDLService.log_path = log_dir
     return WSDLService
 
 
@@ -86,7 +87,8 @@ def test_stats_via_log(wsdl_mock):
 
 
 def test_no_stats(wsdl_mock):
-    wsdl_mock.log_path = "data/"
+    # replace log folder with data folder
+    wsdl_mock.log_path = test_dir
     generator = wsdl_mock.stats(wsdl_mock)
     # generator needs to be converted to dict for testing
     stats = {}
