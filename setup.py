@@ -25,10 +25,20 @@ copy_destinations = [{
     'file': 'handler.py',
     'overwrite': True
 }, {
+    'src': 'src/KI4MailWS/setup.py',
+    'target': '../src/KI4MailWS/',
+    'file': 'setup.py',
+    'overwrite': True
+}, {
     'src': 'web.py',
     'target': '../',
     'file': 'web.py',
     'overwrite': True
+}, {
+    'src': 'Dockerfile',
+    'target': '../',
+    'file': 'Dockerfile',
+    'overwrite': False
 }]
 
 file_name = os.path.basename(__file__)
