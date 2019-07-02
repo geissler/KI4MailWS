@@ -1,5 +1,13 @@
 # Mock class to be replaced by real AI module with same methods
 class MockAI:
+    loaded = False
+
+    def __init__(self, config) -> None:
+        super().__init__()
+        MockAI.loaded = True
+        print("load mock init")
+        print(config['ModelPath'])
+
     @staticmethod
     def preprocess(subject, body, attachments):
         return "Please implement preprocessing method"
