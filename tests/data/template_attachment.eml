@@ -1,0 +1,12 @@
+--##ID##
+X-Attachment-Id: ##CONTENTID##
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; 
+		 name="##DOCUMENTNAME##"
+Content-Disposition: attachment; filename="##DOCUMENTNAME##"
+Content-ID: <##CONTENTID##>
+Content-Transfer-Encoding: base64
+
+##BASE64##
+
+
+--##ID##--
